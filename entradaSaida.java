@@ -31,6 +31,17 @@ public class entradaSaida {
 
         System.out.println("Seus dados estão corretos?(Sim/Não)");
         String resposta = leia.next().toLowerCase();
+
+        while (!resposta.equals("sim") && !resposta.equals("não")) {
+            System.out.println("Por favor, digite sim ou não.\n");
+            resposta = leia.next().toLowerCase();
+        }
+        if (resposta.equals("sim")){
+            System.out.println("O sistema agradece pela confiança!");
+        }else {
+            System.out.println("O sistema reiniciará. Por favor, forneça os dados novamente.");
+        }
+        leia.close();
     }
 
     }
